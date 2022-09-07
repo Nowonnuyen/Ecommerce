@@ -1,42 +1,35 @@
 package com.formation.javaformation.entities;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-
 import java.util.stream.Collectors;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
 
 
 
 @Entity
 @Table(name="category")
 public class Category extends Material{
-	//private UUID id;
-	//private String label;
+	private String label;
+	private String description;
 	@OneToMany(cascade = CascadeType.ALL,mappedBy = "category", orphanRemoval = true, fetch = FetchType.LAZY)
 	private List<Product> productList; //pk on tretire le  = new ArrayList<>()
-
-	/*
-	public UUID getId() {
-		return id;
-	}
-	public void setId(UUID id) {
-		this.id = id; 
-	}
 
 	public String getLabel() {
 		return label;
 	}
+
 	public void setLabel(String label) {
 		this.label = label;
 	}
-	*/
 
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
 	//mon getter liste
 	public List<Product> getProductList() {

@@ -1,11 +1,9 @@
 package com.formation.javaformation.repositories;
 
-import java.util.UUID;
-
+import com.formation.javaformation.entities.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-
-import com.formation.javaformation.entities.Post;
+import java.util.UUID;
 
 public interface PostRepository extends JpaRepository<Post, UUID> {
 

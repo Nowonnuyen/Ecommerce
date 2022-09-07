@@ -1,29 +1,19 @@
 package com.formation.javaformation.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 @Entity
 public class Address extends Material {
-	
-	// private int id;
 	private int zipCode;
 	private String city;
 	private String road;
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "customer")
 	private Customer customer;
-	
-	
-	/*
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	*/
 	public int getZipCode() {
 		return zipCode;
 	}
@@ -42,7 +32,6 @@ public class Address extends Material {
 	public void setRoad(String road) {
 		this.road = road;
 	}
-	
 	// customer 
 	public Customer getCustomer() {
 		return customer;
@@ -50,8 +39,7 @@ public class Address extends Material {
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
-	
-	
+
 	
 
 }

@@ -1,31 +1,18 @@
 package com.formation.javaformation.initdatabase;
 
+import com.formation.javaformation.entities.*;
+import com.formation.javaformation.repositories.*;
+import org.springframework.boot.CommandLineRunner;
+
 import java.util.UUID;
 
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
 
-import com.formation.javaformation.entities.Address;
-import com.formation.javaformation.entities.Category;
-import com.formation.javaformation.entities.Customer;
-import com.formation.javaformation.entities.Post;
-import com.formation.javaformation.entities.PostTags;
-import com.formation.javaformation.entities.Product;
-import com.formation.javaformation.repositories.CategoryRepository;
-import com.formation.javaformation.repositories.CustomerRepository;
-import com.formation.javaformation.repositories.OrderRepository;
-import com.formation.javaformation.repositories.PostRepository;
-import com.formation.javaformation.repositories.ProductRepository;
-
-@Component
 public class InitDatabaseRunner implements CommandLineRunner {
-
 	private final CategoryRepository categoryRepository;
 	private final ProductRepository productRepository;
 	private final CustomerRepository customerRepository;
 	private final OrderRepository orderRepository;
 	private final PostRepository postRepository;
-
 
 	public InitDatabaseRunner(CategoryRepository categoryRepository, ProductRepository productRepository,CustomerRepository customerRepository, OrderRepository orderRepository,PostRepository postRepository) {
 		this.categoryRepository = categoryRepository;
