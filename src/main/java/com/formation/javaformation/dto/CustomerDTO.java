@@ -4,9 +4,10 @@ import java.util.UUID;
 
 public class CustomerDTO {
     private String firstName;
+    private String userName;
     private String lastName;
     private AddressDTO addressDTO;
-    private UUID id;
+    private long id;
     private String avis;
     public String getFirstName() {
         return firstName;
@@ -18,18 +19,24 @@ public class CustomerDTO {
         return lastName;
     }
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.lastName = lastName; 
     }
-    public AddressDTO getAddressDTO() {
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public AddressDTO getAddressDTO() {
         return addressDTO;
     }
     public void setAddressDTO(AddressDTO addressDTO) {
         this.addressDTO = addressDTO;
     }
-    public UUID getId() {
+    public long getId() {
         return id;
     }
-    public void setId(UUID id) {
+    public void setId(long id) {
         this.id = id;
     }
 

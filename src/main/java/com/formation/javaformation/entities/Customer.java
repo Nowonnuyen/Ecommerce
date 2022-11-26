@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 @Table(name="customer")
 public class Customer extends Material {
 	private String firstname;
+	private String username;
 	private String lastname;
 	@OneToOne(mappedBy = "customer", cascade = CascadeType.ALL,
 			fetch = FetchType.LAZY, optional = false)
@@ -30,6 +31,13 @@ public class Customer extends Material {
 	}
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
+	}
+	
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	public Address getAddress() {
 		return address;

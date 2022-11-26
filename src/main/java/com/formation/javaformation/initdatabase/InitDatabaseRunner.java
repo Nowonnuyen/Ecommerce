@@ -25,39 +25,37 @@ public class InitDatabaseRunner implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		Category categoryOne = new Category();
-		categoryOne.setId(UUID.randomUUID());
+		
 		categoryOne.setLabel("Boisson");
 
 		Category categoryTwo = new Category();
-		categoryTwo.setId(UUID.randomUUID());
+
 		categoryTwo.setLabel("Plat");
 
 
 		Category categoryThree = new Category();
-		categoryThree.setId(UUID.randomUUID());
+		
 		categoryThree.setLabel("Dessert");
 
 		//******
 
 		Product productOne = new Product();
-		productOne.setId(UUID.randomUUID());
+	
 		productOne.setLabel("Perrier");
 		categoryOne.addProduct(productOne);
 
 		Product productTwo = new Product();
-		productTwo.setId(UUID.randomUUID());
+		
 		productTwo.setLabel("Coca");
 		categoryOne.addProduct(productTwo);
 
 
-		Product productThree = new Product();
-		productThree.setId(UUID.randomUUID());
-		productThree.setLabel("4 fromages");
-		categoryTwo.addProduct(productThree);
+	
+	
 
 
 		Product productFour = new Product();
-		productFour.setId(UUID.randomUUID());
+		
 		productFour.setLabel("Fraisier");
 		categoryThree.addProduct(productFour);
 
