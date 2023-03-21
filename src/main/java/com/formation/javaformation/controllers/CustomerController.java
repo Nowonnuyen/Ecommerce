@@ -32,7 +32,7 @@ public class CustomerController {
 				return ResponseEntity //ResponseEntity represents the whole HTTP response: status code, headers, and body
 						.badRequest()
 						.header("X-Creation_Failed", "Customer creation failed")
-						.body(customerCreated); //en parametre customerCreate instantication de CustomerDTP ligne 23 donc pojo de customerDTO en body?
+						.body(customerCreated); //en parametre customerCreate instantication de CustomerDTO ligne 23 donc pojo de customerDTO en body?
 
 			}
 //séparer le create et le update @PUTMAPPING(‘’/update/{id}/) public ResponseEntity<CustomerDTO> update(@PathVariable Long id, @RequestBody CustomerDTO customer)

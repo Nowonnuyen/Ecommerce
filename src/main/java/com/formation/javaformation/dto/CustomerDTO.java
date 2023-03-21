@@ -1,6 +1,6 @@
 package com.formation.javaformation.dto;
 
-import java.util.UUID;
+
 
 public class CustomerDTO {
     private String firstName;
@@ -9,6 +9,8 @@ public class CustomerDTO {
     private AddressDTO addressDTO;
     private long id;
     private String avis;
+    
+    
     public String getFirstName() {
         return firstName;
     }

@@ -21,8 +21,7 @@ import org.springframework.util.StringUtils;
 public class CustomerService {
 	private final CustomerRepository customerRepository;
 	private static Customer CUSTOMER_NOT_FOUND = null;
-
-	public CustomerService(CustomerRepository customerRepository)  {
+ 	public CustomerService(CustomerRepository customerRepository)  {
 		this.customerRepository = customerRepository;
 	}
 	public CustomerDTO create(CustomerDTO customerDTO) throws CustomerRegistrationException{
@@ -35,7 +34,7 @@ public class CustomerService {
 	}
 
 
-	//exo faire en sorte que en mode création le Lastname le firstbname Username soit obligatoire.....
+	//exo faire en sorte que en mode création le Lastname le firstname Username soit obligatoire.....
 	public CustomerDTO update(Customer customer, CustomerDTO customerDTO)throws CustomerRegistrationException {
 		this.checkCustomerData(customerDTO);
 		customer.setLastname(customerDTO.getLastName());

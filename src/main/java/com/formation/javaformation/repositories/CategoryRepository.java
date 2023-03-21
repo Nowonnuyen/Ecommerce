@@ -7,6 +7,6 @@ import org.springframework.stereotype.Component;
 import java.util.UUID;
 
 @Component
-public interface CategoryRepository extends JpaRepository<Category, UUID> {
+public interface CategoryRepository extends JpaRepository<Category, Long> {
 
 }
